@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" ?>
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<RECORD>
+		<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" /> <!-- Room category -->
+		<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" /> <!-- Width -->
+		<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" /> <!-- Length -->
+		<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" /> <!-- Height -->
+		<FIELD ID="5" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" /> <!-- Trade -->
+		<FIELD ID="6" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="3" /> <!-- Is Extra Item -->
+		<FIELD ID="7" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="2000" /> <!-- Description -->
+		<FIELD ID="8" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" /> <!-- Labour Qty -->
+		<FIELD ID="9" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" /> <!-- Labour Measure -->
+		<FIELD ID="10" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" /> <!-- Labour Rate -->
+		<FIELD ID="11" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" /> <!-- Labour Margin -->
+		<FIELD ID="12" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" /> <!-- Material Qty -->
+		<FIELD ID="13" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" /> <!-- Material Measure -->
+		<FIELD ID="14" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" /> <!-- Material Rate -->
+		<FIELD ID="15" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="10" /> <!-- Material Margin -->
+	</RECORD>
+	<ROW>
+		<COLUMN SOURCE="1" NAME="room_category" xsi:type="SQLVARYCHAR" />
+		<COLUMN SOURCE="2" NAME="width" xsi:type="SQLDECIMAL" />
+		<COLUMN SOURCE="3" NAME="length" xsi:type="SQLDECIMAL" />
+		<COLUMN SOURCE="4" NAME="height" xsi:type="SQLDECIMAL" />
+		<COLUMN SOURCE="5" NAME="trade_name" xsi:type="SQLVARYCHAR" />
+		<COLUMN SOURCE="6" NAME="is_extra_item" xsi:type="SQLVARYCHAR" />
+		<COLUMN SOURCE="7" NAME="description" xsi:type="SQLVARYCHAR" />
+		<COLUMN SOURCE="8" NAME="l_qty" xsi:type="SQLDECIMAL" />
+		<COLUMN SOURCE="9" NAME="l_measure" xsi:type="SQLVARYCHAR" />
+		<COLUMN SOURCE="10" NAME="l_rate" xsi:type="SQLDECIMAL" />
+		<COLUMN SOURCE="11" NAME="l_margin" xsi:type="SQLDECIMAL" />
+		<COLUMN SOURCE="12" NAME="m_qty" xsi:type="SQLDECIMAL" />
+		<COLUMN SOURCE="13" NAME="m_measure" xsi:type="SQLVARYCHAR" />
+		<COLUMN SOURCE="14" NAME="m_rate" xsi:type="SQLDECIMAL" />
+		<COLUMN SOURCE="15" NAME="m_margin" xsi:type="SQLDECIMAL" />
+	</ROW>
+</BCPFORMAT>

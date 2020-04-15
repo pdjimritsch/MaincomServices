@@ -1,0 +1,16 @@
+﻿USE [visionary]; -- CHANGE IF REQUIRED
+GO
+
+SET ANSI_NULLS ON;
+GO
+
+SET QUOTED_IDENTIFIER ON;
+GO
+
+SET ANSI_PADDING OFF;
+GO
+
+IF ISNULL(OBJECTPROPERTY(OBJECT_ID(N'Employee'), N'IsUserTable'), 0) = 1
+	IF ( COLUMNPROPERTY(OBJECT_ID(N'Employee'), 'Description', 'ColumnId') IS NULL )
+		ALTER TABLE [dbo].[Employee] ADD [Description] VARCHAR(200) NULL;
+GO

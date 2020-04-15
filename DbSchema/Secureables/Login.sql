@@ -1,0 +1,23 @@
+﻿CREATE LOGIN [VisionaryUser] WITH PASSWORD = 'P@ssword' HASHED, DEFAULT_DATABASE = master;
+GO
+
+GRANT ADMINISTER BULK OPERATIONS, CONNECT SQL TO [VisionaryUser];
+GO
+
+USE [sessions];
+GO
+
+CREATE USER [VisionaryUser] For LOGIN [VisionaryUser];
+GO
+
+GRANT CONNECT, DELETE, INSERT, UPDATE, SELECT, EXECUTE, CREATE TABLE TO [VisionaryUser];
+GO
+
+USE [Visionary];
+GO
+
+CREATE USER [VisionaryUser] For LOGIN [VisionaryUser];
+GO
+
+GRANT CONNECT, DELETE, INSERT, UPDATE, SELECT, EXECUTE, CREATE TABLE TO [VisionaryUser];
+GO
